@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        nav {
+            text-decoration: none;
+            background-color: gray;
+            margin: 1px 200px;
+             /*deslocamento horizontal (- esquerda   + direita)  */
+             box-shadow: 1px 1px 1px black;
+        }
+
+        a { 
+            text-decoration: none; /* sublinhado embaixo(decoração): não*/
+            color: white;
+            font-weight: bold; /*negrito*/
+            margin-right: 10px;
+        }
+
+        a:hover { /*quando passar o mouse...*/
+            text-decoration: underline; /*colocar decoração de linha a baixo*/
+        }
+
+        main {
+            background-color: rgb(114, 114, 185);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+        }
+
+        article {
+            background-color: lightgray;
+        }
+
+        aside {
+            background-color: rgb(243, 240, 240);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 1px;
+
+        }
+    </style>
+</head>
+<body>
+    <header> <!--cabeçalho-->
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main> <!-- conteúdo principal -->
+        <section id="noticias">
+            <article>
+                <h2>noticia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, a magni perferendis provident aut sit excepturi enim quis necessitatibus dignissimos beatae inventore veniam! Qui tempore ullam rem aperiam officia. Quia.</p>
+                <aside>
+                    <p>Conteúdo automático</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer> <!-- rodapé -->
+        <p>Desenvolvido por Rafael</p>
+    </footer> 
+</body>
+</html>

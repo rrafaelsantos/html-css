@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador e de acordo com o tamanho a foto abaixo mudará</p>
+    
+    <picture>
+         <source media="(min-width: 1030px)" srcset="imagens/foto-g.png" type="image/png"> <!--se o dispositivo do cliente tiver mais de 1030px de largura aparecerá a foto g -->
+         <source media="(min-width: 730px)" srcset="imagens/foto-m.png" type="image/png"> <!--se o dispositivo do cliente tiver mais de 730px de largura aparecerá a foto m -->
+      <img src="imagens/foto-p.png" alt="imagem dinâmica"> <!-- else aparecerá a original (foto p)-->
+    </picture>
+    <p> Agora uma imagem dinâmica pessoal abaixo</p>
+    <picture>
+        <source media="(min-width: 1030px)" srcset="imagens/foto-1000.JPG" type="image/JPG">
+        <source media="(min-width: 730px)" srcset="imagens/foto-700.JPG" type="image/JPG">
+        <img src="imagens/foto-300.JPG" alt="imagem pessoal dinâmica">
+    </picture>
+    <h1>Reproduzindo audio</h1>
+    <h2>Existem duas maneiras</h2>
+    <p>A maneira mais simples é colocando um source como um atributo da tag AUDIO e adicionando também o atributo controls</p>
+    <audio src="midia/twohearts.mp3" controls></audio>
+    <p>A segunda maneira é adicionando a tag source:src entre as tags de audio</p>
+    <audio preload="auto" controls> <!--controls para aparecer no navegador -->
+        <source src="midia/colony.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
