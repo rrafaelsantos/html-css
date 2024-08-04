@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*É importante colocar uma cor de fundo por tras da imagem de fundo pq se a imagem de fundo demorar para carregar, por conta da internet, o cliente pode usar o site pois o conteúdo é carregado primeiro e o estilo depois*/
+        body {
+            height: 100vh;
+            background-color: black; /*fundo preto*/
+            background-image: url(imagens/wallpaper002.jpg);
+            background-position: center center; /*primeiro vertical, depois horizontal*/
+            background-repeat: no-repeat;
+
+            /* o background-size tem por padrão o auto, mas temos 3 possibilidades para deixar a imagem de enquadrada em dispositivos grandes ou pequenos (pelo menos foram ensinados 3)*/
+
+            /*background-size: 100% 100%; Ele comporta todos os tamanhos de tela, porém distorce a imagem, deixando a mesma achatada dependendo da diferença de tamanho entre a imagem e o dispositivo do cliente*/
+
+            /*background-size: contain; Nesse estilo a imagem se adapta ao tamanho da tela pela dimensão dela mesma, ou seja, ela incluíra o fundo original assim como quando assistimos um filme de tela LED num monitor quadrado*/
+
+            background-size: cover; /*(cobrir) Essa é a melhor opção pois ele cobre toda a tela sem distorcer a imagem, porém ela cortará dependendo do tamanho do dispositivo do cliente*/ 
+        }
+
+        main {
+            background-color: white; /*fundo do conteúdo principal branco*/
+            width: 400px; /*largura de 400px*/
+            padding: 10px; 
+            margin: auto; /*para deixar alinhado ao centro*/
+            border: 1px solid blue;
+            border-radius: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, sunt enim. Dicta qui sed nemo tenetur nobis esse fugit magnam aut voluptas veniam laboriosam numquam vitae, sit eos nisi architecto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem libero sequi fugiat vel omnis rem impedit dignissimos alias soluta, amet repellendus. Nemo voluptas optio inventore velit rem magni excepturi blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nisi aut ipsum omnis ipsam quos magnam dolorem officiis laborum molestias harum libero quas debitis, quisquam unde possimus nulla dignissimos quidem?</p>
+    </main>
+</body>
+</html>
