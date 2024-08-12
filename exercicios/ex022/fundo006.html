@@ -8,28 +8,38 @@
         /*É importante colocar uma cor de fundo por tras da imagem de fundo pq se a imagem de fundo demorar para carregar, por conta da internet, o cliente pode usar o site pois o conteúdo é carregado primeiro e o estilo depois*/
         body {
             height: 100vh;
-            background-color: black; /*fundo preto*/
+            background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center center; /*primeiro vertical, depois horizontal*/
-            background-repeat: repeat-y;
+            background-repeat: no-repeat;
 
             /* o background-size tem por padrão o auto, mas temos 3 possibilidades para deixar a imagem de enquadrada em dispositivos grandes ou pequenos (pelo menos foram ensinados 3)*/
 
             /*background-size: 100% 100%; Ele comporta todos os tamanhos de tela, porém distorce a imagem, deixando a mesma achatada dependendo da diferença de tamanho entre a imagem e o dispositivo do cliente*/
 
-            /*background-size: contain; Nesse estilo a imagem se adapta ao tamanho da tela pela dimensão dela mesma, ou seja, ela incluíra o fundo original assim como quando assistimos um filme de tela LED num monitor quadrado*/
+            /*background-size: contain; Nesse estilo a imagem se adapta ao tamanho da tela pela dimensão dela mesma, ou seja, ela incluirá o fundo original assim como quando assistimos um filme de tela LED num monitor quadrado*/
 
             background-size: cover; /*(cobrir) Essa é a melhor opção pois ele cobre toda a tela sem distorcer a imagem, porém ela cortará dependendo do tamanho do dispositivo do cliente*/ 
+
+            background-attachment: fixed; /*por padrão, esse estilo vem como "scrool", quando rolamos a tela para baixo, o fundo rola também. Jà com fixed, ela fica fixa na tela, sem quebrar, apenas o conteúdo rola para baixo ou para cima
+
+            /*
+            SHORTHAND - BACKGROUND
+
+            color > image > position > repeat > [size] > attachment
+            */
+
+            /* background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed; 
+            Ainda é necessário colocar o background-size pois na atualização ainda não está como diz no manual*/
         }
 
         main {
-            background-color: white; /*fundo do conteúdo principal branco*/
-            width: 400px; /*largura de 400px*/
+            background-color: white;
+            max-width: 400px;
             padding: 10px; 
             margin: auto; /*para deixar alinhado ao centro*/
             border: 1px solid blue;
             border-radius: 5px;
-            
         }
     </style>
 </head>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            
+            position: relative; /*por padrão o posicionamento de todo bloco já é reltivo*/
+            height: 94.5vh;
+            padding: 10px;
+            background-color: red;
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            position: absolute; /*quando colocamos a posição absolute podemos configurar duas propriedades muito importantes, left e top*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%; /*o ponto de partida da contagem é da borda esquerda até a canto superior esquerdo do box*/
+            top: 50%; /*ja do top é do topo da tela ao canto superior esquerdo do box amarelo*/
+
+            transform: translate(-50%, -50%); /*(eixo x, eixo y)*/
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
