@@ -10,8 +10,8 @@
             height: 100vh;
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
-            background-position: center center; /*primeiro vertical, depois horizontal*/
-            background-repeat: no-repeat;
+            background-position: center center; /*primeiro horizontal, depois vertical*/
+            background-repeat: no-repeat; /*faz com que as imagens de fundo não se repitam e apareçam apenas uma vez se rolar para baixo (esse estilo não está funcionando pois temos o background-attachment: fixed na linha 24*/
 
             /* o background-size tem por padrão o auto, mas temos 3 possibilidades para deixar a imagem de enquadrada em dispositivos grandes ou pequenos (pelo menos foram ensinados 3)*/
 
@@ -21,7 +21,7 @@
 
             background-size: cover; /*(cobrir) Essa é a melhor opção pois ele cobre toda a tela sem distorcer a imagem, porém ela cortará dependendo do tamanho do dispositivo do cliente*/ 
 
-            background-attachment: fixed; /*por padrão, esse estilo vem como "scrool", quando rolamos a tela para baixo, o fundo rola também. Jà com fixed, ela fica fixa na tela, sem quebrar, apenas o conteúdo rola para baixo ou para cima
+            background-attachment: fixed; /*por padrão, esse estilo vem como "scroll", quando rolamos a tela para baixo, o fundo rola também. Jà com fixed, ela fica fixa na tela, sem quebrar, apenas o conteúdo rola para baixo ou para cima
 
             /*
             SHORTHAND - BACKGROUND
@@ -38,8 +38,9 @@
             max-width: 400px;
             padding: 10px; 
             margin: auto; /*para deixar alinhado ao centro*/
-            border: 1px solid blue;
+            border: 1px solid black;
             border-radius: 5px;
+            box-shadow: 0px 0px 8px 7px rgba(0, 0, 0, 0.247);
         }
     </style>
 </head>
