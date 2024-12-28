@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /*para o congelamento do painel é necessário que a tabela esteja com a posição relativa*/
         }
         
         caption {
@@ -27,9 +28,19 @@
             padding: 10px;
         }
 
-        thead,tfoot {
-            background-color: gray;
+        thead, tfoot {
+            background-color: #504e4e;
             color: white;
+        }
+        
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #504e4e;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray; /*pseudo-classe: aplicar o estilo a cada 2 linhas, determina a qtd no que está sob parênteses. Também é possível colocar "odd" (ímpares) e "even" (pares)*/
         }
 
         td.num {
@@ -56,8 +67,8 @@
         <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th scope="col">Estado</th> <!--o scope (escopo) está em col (coluna). Quer dizer que o conteúdo e os dados desse título estão na mesma coluna-->
-                <th scope="col" style="width: 100px;">População</th>
+                <th scope="col" class="congela">Estado</th> <!--o scope (escopo) está em col (coluna). Quer dizer que o conteúdo e os dados desse título estão na mesma coluna-->
+                <th scope="col" style="width: 100px;" class="congela">População</th>
             </tr>
         </thead>
 
