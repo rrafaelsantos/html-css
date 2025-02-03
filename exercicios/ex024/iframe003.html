@@ -14,6 +14,20 @@
             height: 400px;
             border: 2px solid black;
         }
+
+        a {
+            color: rgb(68, 0, 255);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: red;
+        }
+        
     </style>
 </head>
 <body>
@@ -30,10 +44,9 @@
 
     <p>Para criarmos uma conexão entre os links ( &lt;a&gt; ) e os iframes ( &lt;iframe&gt; ) precisamos colocar os atributos "name" no iframe e "target" no link. É só colocar o mesmo valor em ambos e, então, teremos a conexão</p>
 
-    <iframe srcdoc="<h1>Escolha uma das opções acima</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quibusdam cumque cupiditate provident culpa quisquam recusandae dolorem ex officia magnam atque necessitatibus, minima reiciendis quaerat nesciunt quis sunt architecto aliquid?<img src='imagens/cursoemvideo-logo.png'</p>" name="frame" frameborder="0">
+    <iframe srcdoc="<h1>Escolha uma das opções acima</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quibusdam cumque cupiditate provident culpa quisquam recusandae dolorem ex officia magnam atque necessitatibus, minima reiciendis quaerat nesciunt quis sunt architecto aliquid?<img src='imagens/cursoemvideo-logo.png' alt=''></p>" name="frame" frameborder="0">
         <p>Infelizment seu navegador não é compatível</p>
     </iframe>
-
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda numquam laborum eum optio labore, nostrum architecto fuga. Sapiente doloribus iste quibusdam natus, ab porro sit explicabo blanditiis cupiditate deserunt eum.</p>
 </body>
 </html>
