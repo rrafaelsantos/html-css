@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>label, input e method</h1>
+    <form action="cadastro.php" method="POST" autocomplete="off"> <!--existem dois métodos (atributo method) no html. o 'get', que é o método padrão e aparece o preenchimento na url, e o 'post' que esconde da url, porém não é 100% protegido.-->
+        <p><label for="inome">Nome:</label> <!--etiquetar o texto 'nome:' com o input. para isso é preciso colocar o for="(id do input)" nesse caso, o id é "inome"-->
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p><label for="isobrenome">Sobrenome:</label> <!--novamente o label para relacionar o texto do input:text-->
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar" id="botao-enviar">
+        </p>
+    </form>
+</body>
+</html>

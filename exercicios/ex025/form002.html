@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="POST">
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="20" size="40" placeholder="minimo 5 digitos" autocomplete="username"> <!-- (requerido) = lacuna obrigatória; minlength = qtd. mínima possível para digitar; maxlength = qtd. máxima possível para digitar; size = largura da caixa medindo, teoricamente, a qtd de dígitos que cabem; placeholder = o que aparece escrito dentro da caixa antes do usuário digitar; autocomplete = semantica, dizer qual o tipo de caixa --> 
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="6" maxlength="8" autocomplete="current-password"> 
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
