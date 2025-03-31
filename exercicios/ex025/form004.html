@@ -8,16 +8,22 @@
 <body>
     <h1>Exemplo de Formulário</h1>
     <form action="cadastro.php" method="get">
-        <p>
-            <label for="iemail">E-mail</label>
-            <input type="email" name="email" id="iemail" required autocomplete="email"
-            placeholder="digite seu email">
-        </p>
-        <p>
-            <label for="itel">Telefone</label>
-            <input type="tel" name="tel" id="itel" autocomplete="tel" placeholder="(DDD)xxxxx-xxxx" pattern="^\d{4,5}-\d{4}$" required>
-        </p>
-        <!--Estudar mais sobre RegEx (Expressões regulares)-->
+        <fieldset> <!--grupo de campo. Separação por borda em tipos de dados.-->
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="Nome" id="inome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email"
+                placeholder="digite seu email">
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" placeholder="(DDD)xxxxx-xxxx" pattern="^\(\d{2}\) \d{4,5}-\d{4}$" required> <!--Estudar mais sobre RegEx (Expressões regulares). Seria a permissão de elementos nos inputs.-->
+            </p>
+        </fieldset>
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
