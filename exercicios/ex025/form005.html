@@ -12,14 +12,14 @@
             <legend>Sexo</legend>
             <input type="radio" name="sexo" id="isxmas"><label for="isxmas">Masculino</label><br>
             <input type="radio" name="sexo" id="isxfem"><label for="isxfem">Feminino</label>
-        </fieldset>
+        </fieldset> <!-- no radio, é necessário que o name tenha o mesmo valor para que, apenas o clicado por último, seja marcado. nesse caso name="sexo"-->
         <fieldset>
             <legend>Esportes favoritos</legend>
             <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut">Futebol</label><br>
             <input type="checkbox" name="esbas" id="iesbas"><label for="iesbas">Basquete</label><br>
             <input type="checkbox" name="esmma" id="iesmma"><label for="iesmma">MMA</label><br>
             <input type="checkbox" name="esvol" id="iesvol"><label for="iesvol">Volei</label>
-        </fieldset>
+        </fieldset><!--no caso do checkbox, o name deve ser diferente pois podemos deixar marcados mais de um checkbox ao mesmo tempo-->
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
