@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php">
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <option value="">Selecione um estado</option>    
+                <optgroup label="Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                
+                <optgroup label="Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+                
+                <optgroup label="Centro-Oeste">
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+                
+                <optgroup label="Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                
+                <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </p><!--Essa forma não permite que o cliente escreva na caixa, somente que escolha as opções pré-estabelecidas pelo desenvolvedor.-->
+
+        <p>
+            <label for="icida">Cidade</label>
+            <input type="text" name="cidade" id="icida" list="lstcida">
+            <datalist id="lstcida">
+                <option>Rio de Janeiro</option>
+                <option>João Pessoa</option>
+                <option>Vitoria</option>
+                <option>Recife</option>
+                <option>Gramado</option>
+                <option>Porto Seguro</option>
+                <option>Aparecida</option>
+                <option>Niteroi</option>
+            </datalist>
+        </p><!--Esse modo permite o cliente digitar e enviar opções além das pré-estabelecidas.-->
+        <!--Até hoje, dia do desenvolvimento desse código (03/04/2025), não é possível a utilização do optgroup nesse modo-->
+
+        <p>
+            <input type="submit" value="Entrar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
