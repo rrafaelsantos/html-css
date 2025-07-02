@@ -13,11 +13,16 @@ Grandes telas: acima de 1200px
 @media print {
     body {
        background-image: url(../imagens/back-print.jpg); /*desnecessário, pois não vai na impressão */ 
-       font-family: 'Courier New', Courier, monospace;
+       font-family: 'Courier New', Courier, monospace; /*fonte monoespaçada ideal para impressão*/
     }
 
     main {
         border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Créditos das aulas de Media Query do cursoemvideo.com';
+        text-decoration: overline;
     }
 
     h1 {
