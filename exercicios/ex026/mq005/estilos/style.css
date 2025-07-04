@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px; /*reset*/
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    background-color: rgb(223, 222, 222)
+}
+
+header {
+    background-color: rgb(212, 212, 212);
+}
+
+header > h1 { /*"Meu Site"*/
+    padding: 10px; /*espaçamento interno superior e inferior*/
+    text-align: center; 
+}
+
+menu {
+    display: block;
+}
+
+menu > ul { /*lista do menu*/
+    list-style-type: none; /*tira a "bolinha" da lista*/
+}
+
+menu > ul > li > a { /*link das listas do menu*/
+    display: block;
+    padding: 10px; 
+    text-decoration: none; /*tira a linha sublinhada*/
+    text-align: center;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    font-weight: bold; /*negrito*/
+    border-top: 2px solid gray; /*borda superior */
+}
+
+menu > ul > li > a:hover { /*quando passar o mouse nos links*/
+    background-color: gray;
+}
+
+main { /*bloco do conteúdo principal*/
+    width: 90vw; /*90% da tela*/
+    background-color: white;
+    margin: auto;
+    margin-top: 10px; /*espaçamento externo superior*/
+    margin-bottom: 10px;
+    padding: 10px; /*espaçamento interno*/
+    border-radius: 10px; /*quinas menos pontudas*/
+}
+
+article > h2 { /*texto do artigo*/
+    padding-bottom: 10px; /*espaçamento interno inferior*/
+}
+
+article > p {
+    margin-bottom: 10px;
+    text-indent: 40px;
+}
+
+footer { /*rodapé*/
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 5px;
+}
+footer > p {
+    text-align: center;
+    font-size: smaller;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+footer > p > a:hover {
+    text-decoration: underline;
+}
