@@ -16,7 +16,7 @@ header {
 
 header > h1 { /*"Meu Site"*/
     padding: 10px; /*espaçamento interno superior e inferior*/
-    text-align: center; 
+    text-align: center;
 }
 
 i.material-icons {
