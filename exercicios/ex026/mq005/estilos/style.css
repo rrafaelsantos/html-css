@@ -11,7 +11,7 @@ body, html {
 }
 
 header {
-    background-color: rgb(212, 212, 212);
+    background-image: linear-gradient(to bottom, rgb(131, 131, 131), rgb(248, 248, 248));
 }
 
 header > h1 { /*"Meu Site"*/
@@ -46,7 +46,7 @@ menu > ul > li > a { /*link das listas do menu*/
     padding: 10px; 
     text-decoration: none; /*tira a linha sublinhada*/
     text-align: center;
-    background-color: rgb(73, 73, 73);
+    background-color: rgb(46, 46, 46);
     color: white;
     font-weight: bold; /*negrito*/
     border-top: 2px solid gray; /*borda superior */
