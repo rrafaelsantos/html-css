@@ -30,4 +30,5 @@ h2 {
 
 p {
     text-align: justify; /* texto alinhado justificado. Ele da mais espaço entre as palavras pra poder encostar totalmente no canto da tela*/
+    text-indent: 2em; /*indentação no início de cada parágrafo*/
 }
