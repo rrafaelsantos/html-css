@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexible Box</title>
     <style>
-        div.conteiner {
+        div.conteiner { /*elemento pai*/
             background-color: lightsalmon;
+            
             display: flex;
         }
 
-        div.item {
+        div.item { /*elemento filho*/
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
+            
             flex: auto;
         }
     </style>
@@ -27,6 +29,12 @@
         <div class="item">F</div>
         <div class="item">G</div>
         <div class="item">H</div>
-    </div>
+    </div> 
+    <h1>Flexible Box</h1>
+    <p>Os Flexible boxes são uma forma de responsividade nos site.</p>
+    <p>Ele deve ser utilizado quando o conteúdo precisa se enquadrar ao layout do container e ao tamanho da tela do usuário.</p>
+    <h1>Flexible Box Module</h1>
+    <p>O container (pai) levará a seguinte  configuração: "display: flex;"</p>
+    <p>Já os itens (filhos) receberão outros tipos de configuações.</p>
 </body>
 </html>
