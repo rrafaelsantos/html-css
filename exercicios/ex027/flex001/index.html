@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,10 +31,36 @@
         <div class="item">H</div>
     </div> 
     <h1>Flexible Box</h1>
+    <h2>O que é Flexible Box</h2>
+    
     <p>Os Flexible boxes são uma forma de responsividade nos site.</p>
     <p>Ele deve ser utilizado quando o conteúdo precisa se enquadrar ao layout do container e ao tamanho da tela do usuário.</p>
-    <h1>Flexible Box Module</h1>
-    <p>O container (pai) levará a seguinte  configuração: "display: flex;"</p>
+    
+    <h2>Flexible Box Module</h2>
+    <p>O container (pai) levará a seguinte  configuração: <br><br>
+    <code>"display: flex;"</code></p>
     <p>Já os itens (filhos) receberão outros tipos de configuações.</p>
+
+    <h2>Flex Direction</h2>
+    <p>A configuração de flex-direction vai determinar a direção da flex-box.</p>
+    
+    <p>A configuração padrão: <strong>flex-direction: row;</strong>, seguirá da forma horizontal, com a leitura da esquerda para a direita;</p>
+    
+    <p><strong>flex-direction: row-reverse;</strong> na horizontal, com leitura da direita para a esquerda;</p>
+    
+    <p><strong>flex-direction: column;</strong> na vertical, com leitura de cima para baixo;</p>
+
+    <p><strong>flex-direction: column-reverse;</strong> na vertical, com leitura de baixo para cima.</p>
+
+    <h2>Eixos (axis)</h2>
+    <p>Todos os containers possuem eixos, seguem as exemplificações dos eixos abaixo. Levando como base o <strong>flex-direction: row;</strong></p>
+    <p>O primeiro eixo criado é o eixio principal, o main-axis. Ele tem dois pontos, o ponto inicial e o ponto final, que chamamos de main-start e main-end.<br>
+    O main-start localiza-se do lado esquerdo, já o main-end no lado direito.</p>
+    
+    <p>Outro eixo criado é o Eixo Transversal, ou cross-axis. <br>
+    O cross-start que está em cima e o cross-end embaixo.</p>
+
+    <p>Lembrando que essas propriedades se dão para o <strong>flex-direction: row;</strong>. <br>
+    Nos casos das outras direções variam conforme a ideia do código.</p>
 </body>
 </html>
