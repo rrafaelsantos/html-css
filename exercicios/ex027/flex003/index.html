@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexible Box</title>
+    <title>Flexible Wrap</title>
     <style>
         div.conteiner { /*elemento pai*/
             background-color: lightsalmon;
             
             display: flex;
-            flex-direction: column-reverse;
+            flex-flow: row nowrap;
         }
 
         div.item { /*elemento filho*/
             background-color: lightblue;
             border: 1px solid black;
+            text-align: center;
             
-            padding: 10px;
+            flex: auto;
         }
     </style>
 </head>
 <body>
     <div class="conteiner">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
-        <div class="item">H</div>
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
     </div>
+
+    <h1>O que é flex-wrap?</h1>
+    <p>Wrap significa empacotamento ou encapsulamento. Basicamente essa propriedade vai determinar como o container vai se comportar.</p>
+    
+    <p>A propriedade padrão do flex-wrap é nowrap. Nessa propriedade quando eu encolho o container, os conteúdos também encolhem, e não quebram.</p>
+    
+    <p>Quando mudamos a propriedade para "<code>flex-wrap: wrap;</code>" ele quebra.</p>
+    
+    <p>Também aprendemos nesse exercício sobre o "<code>flex-flow: ;</code>" e "<code>flex: auto;</code>"</p>
+
+    <h2>Flex Flow</h2>
+    <p>
+        Basicamente, o flex-flow é basicamente um short hand para incluir o flex-direction e o flex-wrap em uma só propriedade, por exemplo: <br>
+        <code>
+            flex-flow: row nowrap; <br>
+            flex-flow: column wrap; <br>
+            flex-flow: row-reverse wrap-reverse;
+        </code>
+    </p>
+    <h2>Flex: Auto</h2>
+    <p>Quanto ao <code>flex: auto;</code> ele é incluído no filho e serve para se enquadrar em todo o tamanho da tela do usuário, mesmo que alguns itens fiquem maiores do que outros.</p>
 </body>
 </html>
