@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-items</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            height: 100px;
+        }
+        
+        div#stretch {
+            display: flex;
+            align-items: stretch;
+        }
+
+        div#flex-start {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        div#flex-end {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        div#center {
+            display: flex;
+            align-items: center
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Align Items</h1>
+    <h2>Ele trabalha da mesma forma que o Justifi-content, porém com o eixo tranversal</h2>
+    <p>Os exemplos que vamos usar serão utilizados com flex-flow: row nowrap</p>
+
+    <h2>align-items: stretch</h2>
+    <p>É a forma padrão. Como o nome já diz, ele estica os itens:</p>
+    <div id="stretch" class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <h2>align-items: flex-start;</h2>
+    <p>Faz grudar os itens no cross-start e o espaço em branco no cross-end:</p>
+    <div id="flex-start" class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    
+    <h2>align-items: flex-end;</h2>
+    <p>Os itens grudam no cross-end e o espaço em branco no cross-start</p>
+    <div id="flex-end" class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <h2>align-items: center;</h2>
+    <p>O alinhamento dos itens ficam centralizados da forma que deixe o espaçamentos do cross-start e cross-end na mesma distância:</p>
+    
+    <div id="center" class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+</body>
+</html>
