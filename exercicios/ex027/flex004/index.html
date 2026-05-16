@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div#flex-start {
+            background-color: lightsalmon;
+            
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        div#flex-end {
+            background-color: lightsalmon;
+            
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        div#center {
+            background-color: lightsalmon;
+            
+            display: flex;
+            justify-content: center;
+        }
+
+        div#space-between {
+            background-color: lightsalmon;
+            
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div#space-evenly {
+            background-color: lightsalmon;
+            
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        div#space-around {
+            background-color: lightsalmon;
+            
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Justifi-content</h1>
+    <h2>O Justifi-content é a forma com que os itens se comportam dentro dos containers</h2>
+    <p>Os exemplos que vamos usar serão utilizados com flex-flow: row nowrap</p>
+
+    <h2>justify-content: flex-start;</h2>
+    <p>É a foram padrão, ele começa no main-start e o espaço em branco fica no main-end:</p>
+    <div id="flex-start">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <h2>justify-content: flex-end;</h2>
+    <p>Ele joga o último item para o main-end e o espaço em branco fica no main-start:</p>
+    <div id="flex-end">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    
+    <h2>justify-content: center;</h2>
+    <p>Nesse caso os itens ficam todos juntos no centro, deixando os espaços em branco no main-start e no main-end por igual:</p>
+    <div id="center">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <h2>justify-content: space-between;</h2>
+    <p>O primeiro item fica no main-start e o último no main-end, já o restante dos itens recebem a mesma distância de espaçamento entre eles:</p>
+    
+    <div id="space-between">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <h2>justify-content: space-evenly;</h2>
+    <p>Ele vai colocar entre <strong>todos</strong> os itens a mesma quantidade de espaço entre eles. A diferença entre ele e o space-between é que o primeiro e o último item <strong>NÃO</strong> iniciem no main-start e main-end:</p>
+
+    <div id="space-evenly">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <h2>justify-content: space-around;</h2>
+    <p>Nesse caso, ele vai pegar o espaço útil do conteiner, vai dividir pela quantidade de itens contidos (nesse caso 5) e vai centralizá-los dentro dos espaços, fazendo com que à esquerda e à direita de cada item tenha a mesma medida.</p>
+
+    <div id="space-around">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+</body>
+</html>
