@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-self</title>
+    <style>
+        div.conteiner { /*elemento pai*/
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            height: 300px;
+        }
+
+        div.item { /*elemento filho*/
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#i1 {
+            align-self: auto;
+        }
+
+        div#i2 {
+            align-self: flex-start;
+        }
+
+        div#i3 {
+            align-self: flex-end;
+        }
+
+        div#i4 {
+            align-self: center;
+        }
+
+        div#i5 {
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>Order</h1>
+    <p>Por padrão, todo elemento que tem dentro do container tem o order 0 ZERO, porém, é possível modificar atribuindo, a cada um dos itens, uma ordem</p>
+
+    <h1>Align-self</h1>
+    <p>Diferente dos anteriores, essa propriedade é necessariamente aplicada nos elementos filhos, nos itens.</p>
+    <p>Aqui você vai trabalhar individualmente com cada item. Ele vai funcionar diretamente no Cross-axis, no eixo transversal</p>
+
+    <h2>Align-self: auto; (Letra A)</h2>
+    <p>Ele vai herdar a característica de alinhamento vertical que está no container, align-items ou align-content. <br>
+    Para esse exemplo, iremos utilizar o <code>align-items: flex-start;</code>. Observe a letra D.</p>
+
+    <h2>Align-self: flex-start; (Letra B)</h2>
+    Alinhamento perto do cross-start.    
+    
+    <h2>Align-self: flex-end; (Letra C)</h2>
+    Alinhamento perto do cross-end.
+
+    <h2>Align-self: center; (Letra D)</h2>
+    Alinhamento perto do centro, deixando os cross-start e cross-end livres.
+
+    <h2>Align-self: stretch; (Letra E)</h2>
+    <p>Estica o item.</p>
+
+    <h1>Exemplo prático</h1>
+
+    <div class="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+    </div>
+
+</body>
+</html>
