@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify-content</title>
+    <style>
+        div.container {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;
+            height: 400px;
+        }
+
+        div#stretch {
+            align-content: stretch;
+        }
+        
+        div#flex-start {
+            align-content: flex-start;
+        }
+
+        div#flex-end {
+            align-content: flex-end;
+        }
+
+        div#center {
+            align-content: center;
+        }
+
+        div#space-between {
+            align-content: space-between;
+        }
+
+        div#space-evenly {
+            align-content: space-evenly;
+        }
+
+        div#space-around {
+            align-content: space-around;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Align-content</h1>
+    <p>O Align-content é a forma com que os itens se comportam dentro dos containers, alinhando os itens dentro do eixo transversal (cross-axis), quando estes estiverem empacotados.</p>
+    <p>Os exemplos que vamos usar serão utilizados com flex-flow: row nowrap</p>
+
+    <h2>align-content: stretch;</h2>
+    <p>É a forma padrão, ele estica os itens para que fiquem com a mesma dimensão e no tamanho do container:</p>
+    <div id="stretch" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+    
+    <h2>align-content: flex-start;</h2>
+    <p>Ele começa no cross-start e o espaço em branco fica no cross-end:</p>
+    <div id="flex-start" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+
+    <h2>align-content: flex-end;</h2>
+    <p>Ele joga o último item para o cross-end e o espaço em branco fica no cross-start:</p>
+    <div id="flex-end" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+
+    
+    <h2>align-content: center;</h2>
+    <p>Nesse caso os itens ficam todos juntos no centro, deixando os espaços em branco no cross-start e no cross-end por igual:</p>
+    <div id="center" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+
+    <h2>align-content: space-between;</h2>
+    <p>O primeiro item fica no cross-start e o último no cross-end, já o restante dos itens recebem a mesma distância de espaçamento entre eles:</p>
+    
+    <div id="space-between" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+    <h2>align-content: space-evenly;</h2>
+    <p>Ele vai colocar entre <strong>todos</strong> os itens a mesma quantidade de espaço entre eles. A diferença entre ele e o space-between é que o primeiro e o último item <strong>NÃO</strong> estão no cross-start e cross-end:</p>
+
+    <div id="space-evenly" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+
+    <h2>align-content: space-around;</h2>
+    <p>Nesse caso, ele vai pegar o espaço útil do conteiner, vai dividir pela quantidade de itens contidos (nesse caso 5) e vai centralizá-los dentro dos espaços, fazendo com que acima e abaixo de cada item tenha a mesma medida.</p>
+
+    <div id="space-around" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+</body>
+</html>
