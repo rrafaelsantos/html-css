@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-basis</title>
+    <style>
+        div.conteiner { /*elemento pai*/
+            background-color: lightsalmon;
+            
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item { /*elemento filho*/
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: auto;
+        }
+
+        div.valor {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-basis</h1>
+    <p>Vamos considerar o conteiner com <code>flex-flow: row nowrap;</code>.</p>
+    <p>Basicamente, o flex-basis é o tamanho do item. Porém esse valor é o valor máximo. O valor mínimo será determinado pelo conteúdo.</p>
+    <h2>flex-basis: auto</h2>
+    <p>Como sempre começamos com o valor padrão, o primeiro a ser mencionado é o <code>flex-basis: auto;</code></p>
+    <p>Isso significa que o tamanho (largura no caso do row) mínimo do item é ditado pelo tamanho (largura) do seu conteúdo. Se a tela do usuário for menor do que os conteúdos, os itens irão "transbordar" no conteiner. Mas se o a tela for consideravelmente maior, os itens não vão esticar, eles vão manter um espaço em branco, dependendo do tamanho da tela, e do conteiner </p>
+
+     <div class="conteiner">
+        <div class="item">AAA AA</div>
+        <div class="item">BBB</div>
+        <div class="item">CCCC CCC CC</div>
+        <div class="item">DDDDD DDD</div>
+        <div class="item">E</div>
+        <div class="item">FFFFFF</div>
+        <div class="item">HHHHHHHHHHH</div>
+    </div>
+    <h2>flex-basis: 150px</h2>
+    <p>o 200px é só um exemplo, podemos escolher o valor (ou tamanho) que quisermos.</p>
+    <p> É um valor de largura máxima. Se for o caso, ao diminuir, ele vai quebrar o conteúdo para caber numa tela com largura menor</p>
+    <div class="conteiner">
+        <div class="valor">AAA AA</div>
+        <div class="valor">BBB</div>
+        <div class="valor">CCCC CCC CC</div>
+        <div class="valor">DDDDD DDD</div>
+        <div class="valor">E</div>
+        <div class="valor">FFFFFF</div>
+        <div class="valor">HHHHHHHHH</div>
+    </div>
+</body>
+</html>
