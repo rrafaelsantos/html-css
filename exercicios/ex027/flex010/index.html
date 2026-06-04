@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexible Box</title>
+    <title>Shrink and Grow</title>
     <style>
         div.conteiner { /*elemento pai*/
             background-color: lightsalmon;
             
             display: flex;
+            flex-flow: row wrap;
         }
 
         div.item { /*elemento filho*/
@@ -17,10 +17,45 @@
             text-align: center;
             
             flex: auto;
+            flex-basis: 200px;
+            flex-shrink: 0;
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
+    <h1>Flex-shrink e flex-grow</h1>
+    <p>Por padrão as propriedades são:</p>
+    <p><code>flex: shrink: 1;</code></p>
+    <p><code>flex: grow: 0;</code></p>
+    <p>Essas propriedades devem ser utilizadas quando houver as seguintes perguntas:<br>
+    Pode encolher? Pode crescer?</p>
+    <p>Ou, de maneira ainda mais prática, Quer que o flex-basis seja o máximo ou o mínimo?</p>
+    <h2>Flex-shrink</h2>
+    <p>Pode encolher?<br>
+    <code>flex-shrink: 1;</code> = sim <br>
+    <code>flex-shrink: 0;</code> = não</p>
+    <p>Pode crescer? <br>
+    <code>flex-grow: 1;</code> = sim <br>
+    <code>flex-grow: 0;</code> = não</p>
+    
+    <p>Máxima largura: <br>
+        <code>
+            flex: shrink: 1; <br>
+            flex: grow: 0; 
+        </code>
+    </p>
+
+    <p>Mínima largura: <br>
+        <code>
+            flex: shrink: 0; <br>
+            flex: grow: 1;
+        </code>
+    </p>
+
+    <p>Para valores diferentes de 0 e 1 os elementos encolherão ou creserão em proporção com o número.</p>
+    <p>Por exemplo: No caso do shrink (encolher) se o primeiro elemento for 1 e o segundo 2, o segundo encolherá o dobro, se for 4, encolherá o quádruplo.</p>
+    <p>Mas lembre-se, ele encolherá em proporção e comparação com os demais elementos numerados.</p>
     <div class="conteiner">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -29,38 +64,13 @@
         <div class="item">F</div>
         <div class="item">G</div>
         <div class="item">H</div>
-    </div> 
-    <h1>Flexible Box</h1>
-    <h2>O que é Flexible Box</h2>
-    
-    <p>Os Flexible boxes são uma forma de responsividade nos sites.</p>
-    <p>Ele deve ser utilizado para o enquadramento entre o layout do container e ao tamanho da tela do usuário.</p>
-    
-    <h2>Flexible Box Module</h2>
-    <p>O container (pai) levará a seguinte  configuração: <br><br>
-    <code>"display: flex;"</code></p>
-    <p>Já os itens (filhos) receberão outros tipos de configuações.</p>
-
-    <h2>Flex Direction</h2>
-    <p>A configuração de flex-direction vai determinar a direção da flex-box.</p>
-    
-    <p>A configuração padrão: <strong>flex-direction: row;</strong>, seguirá da forma horizontal, com a leitura da esquerda para a direita;</p>
-    
-    <p><strong>flex-direction: row-reverse;</strong> na horizontal, com leitura da direita para a esquerda;</p>
-    
-    <p><strong>flex-direction: column;</strong> na vertical, com leitura de cima para baixo;</p>
-
-    <p><strong>flex-direction: column-reverse;</strong> na vertical, com leitura de baixo para cima.</p>
-
-    <h2>Eixos (axis)</h2>
-    <p>Todos os containers possuem eixos, seguem as exemplificações dos eixos abaixo. Levando como base o <strong>flex-direction: row;</strong></p>
-    <p>O primeiro eixo criado é o eixio principal, o main-axis. Ele tem dois pontos, o ponto inicial e o ponto final, que chamamos de main-start e main-end.<br>
-    O main-start localiza-se do lado esquerdo, já o main-end no lado direito.</p>
-    
-    <p>Outro eixo criado é o Eixo Transversal, ou cross-axis. <br>
-    O cross-start que está em cima e o cross-end embaixo.</p>
-
-    <p>Lembrando que essas propriedades se dão para o <strong>flex-direction: row;</strong>. <br>
-    Nos casos das outras direções variam conforme a ideia do código.</p>
+    </div>
+    <h2>Apresentando outro modelo de exemplo</h2>
+    <div class="conteiner">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem earum provident hic culpa, ex ullam commodi, ad magni doloremque veniam aspernatur odio adipisci eum laborum optio dolore. Quidem, dolorum?
+        </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe placeat soluta quo at facere, culpa deserunt odio rem in! Architecto quam omnis illo numquam aliquid provident, fugiat fugit sed nesciunt!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis magnam, molestias a ullam est obcaecati harum tenetur. Adipisci sint ipsa sunt, unde tenetur laborum nobis explicabo corporis ratione cupiditate?</div>
+    </div>
 </body>
 </html>
